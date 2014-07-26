@@ -1,30 +1,44 @@
 [
 {
+    "pk": 1,
+    "model": "contacts.contact",
     "fields": {
+        "nid": 4561879,
         "obs": "1, 2, 3, testing...",
-        "email": "johndoe@example.com",
         "last_mod": "2014-07-26T00:17:18.581Z",
-        "last_name": "Doe",
-        "gender": "M",
         "added": "2014-07-26T00:17:18.581Z",
         "first_name": "John",
-        "nid": 4561879
-    },
-    "model": "contacts.contact",
-    "pk": 1
+        "email": "johndoe@example.com",
+        "last_name": "Doe",
+        "gender": "M"
+    }
 },
 {
+    "pk": 2,
+    "model": "contacts.contact",
     "fields": {
+        "nid": 654321,
         "obs": "Some observations.",
-        "email": "janedoe@example.com",
         "last_mod": "2014-07-26T22:40:44.459Z",
-        "last_name": "Doe",
-        "gender": "F",
         "added": "2014-07-26T22:40:44.459Z",
         "first_name": "Jane",
-        "nid": 654321
-    },
+        "email": "janedoe@example.com",
+        "last_name": "Doe",
+        "gender": "F"
+    }
+},
+{
+    "pk": 3,
     "model": "contacts.contact",
-    "pk": 2
+    "fields": {
+        "nid": 789435,
+        "obs": "Some interesting facts.",
+        "last_mod": "2014-07-26T23:36:58.493Z",
+        "added": "2014-07-26T23:36:58.493Z",
+        "first_name": "Jane",
+        "email": "janesmith@example.com",
+        "last_name": "Smith",
+        "gender": "F"
+    }
 }
 ]
