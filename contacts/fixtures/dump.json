@@ -1,0 +1,30 @@
+[
+{
+    "fields": {
+        "obs": "1, 2, 3, testing...",
+        "email": "johndoe@example.com",
+        "last_mod": "2014-07-26T00:17:18.581Z",
+        "last_name": "Doe",
+        "gender": "M",
+        "added": "2014-07-26T00:17:18.581Z",
+        "first_name": "John",
+        "nid": 4561879
+    },
+    "model": "contacts.contact",
+    "pk": 1
+},
+{
+    "fields": {
+        "obs": "Some observations.",
+        "email": "janedoe@example.com",
+        "last_mod": "2014-07-26T22:40:44.459Z",
+        "last_name": "Doe",
+        "gender": "F",
+        "added": "2014-07-26T22:40:44.459Z",
+        "first_name": "Jane",
+        "nid": 654321
+    },
+    "model": "contacts.contact",
+    "pk": 2
+}
+]

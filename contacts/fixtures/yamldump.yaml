@@ -1,0 +1,10 @@
+-   fields: {added: !!timestamp '2014-07-26 00:17:18.581812+00:00', email: johndoe@example.com,
+        first_name: John, gender: M, last_mod: !!timestamp '2014-07-26 00:17:18.581845+00:00',
+        last_name: Doe, nid: 4561879, obs: '1, 2, 3, testing...'}
+    model: contacts.contact
+    pk: 1
+-   fields: {added: !!timestamp '2014-07-26 22:40:44.459585+00:00', email: janedoe@example.com,
+        first_name: Jane, gender: F, last_mod: !!timestamp '2014-07-26 22:40:44.459618+00:00',
+        last_name: Doe, nid: 654321, obs: Some observations.}
+    model: contacts.contact
+    pk: 2
