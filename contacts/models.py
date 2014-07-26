@@ -2,14 +2,24 @@ from django.db import models
 from django.utils.translation import ugettext_lazy as _
 from django.utils.encoding import python_2_unicode_compatible
 
+
 @python_2_unicode_compatible
 class Contact(models.Model):
+    # Translators: gender abbreviatons.
+    MALE = _('M')
+    FEMALE = _('F')
+    GENDER_CHOICES = (
+        (MALE, _('male')),
+        (FEMALE, _('female')),
+        )
+
     added = models.DateTimeField(_('added'), auto_now_add=True)
     last_mod = models.DateTimeField(_('last mod.'), auto_now=True)
     first_name = models.CharField(_('first name'), max_length=50)
     last_name = models.CharField(_('last name'), max_length=50)
-    # Translators: either gender or number. Used for e-mail templates.
-    gender = models.CharField(choices=())
+    # Translators: either gender or number. Used for e-mail templates, etc.
+    gender = models.CharField(max_length=1, default=MALE,
+        choices=GENDER_CHOICES)
     # Translators: use your country's national identification number.
     nid = models.IntegerField(_('ID'), unique=True, blank=True, null=True,
         help_text=_('national identification number'))
