@@ -1,0 +1,16 @@
+[
+{
+    "pk": 1,
+    "model": "contacts.contact",
+    "fields": {
+        "nid": 4563287,
+        "obs": "Johnny is a nice guy.",
+        "last_mod": "2014-07-26T00:17:18.581Z",
+        "added": "2014-07-26T00:17:18.581Z",
+        "first_name": "John",
+        "email": "johnsmith@example.com",
+        "last_name": "Smith",
+        "gender": "M"
+    }
+}
+]
