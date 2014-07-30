@@ -23,8 +23,7 @@ class Contact(models.Model):
     # Translators: use your country's national identification number.
     nid = models.IntegerField(_('ID'), unique=True, blank=True, null=True,
         help_text=_('national identification number'))
-    email = models.EmailField(_('e-mail'), blank=True, null=True,
-       help_text=_('telephone number'))
+    email = models.EmailField(_('e-mail'), blank=True)
     # To be implemented: tel and address, probably as foreign keys
     # tel1 = models.IntegerField(_('cell phone num.'), blank=True, null=True)
     # tel2 = models.IntegerField(_('tel.'), blank=True, null=True)
