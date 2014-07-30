@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add a new contact</title>
+</head>
+<body>
+    <h1>Add a new contact</h1>
+    <form action="{% url 'contacts:create' %}">
+        {% csrf_token %}
+        <ul>
+            {{ form.as_ul }}
+        </ul>
+    </form>
+</body>
+</html>

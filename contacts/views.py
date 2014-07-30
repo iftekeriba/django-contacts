@@ -1,3 +1,8 @@
-from django.shortcuts import render
+from django.views.generic.edit import CreateView
 
-# Create your views here.
+from .models import Contact
+
+
+class ContactCreateView(CreateView):
+    model = Contact
+    template_name_suffix = '_create'
