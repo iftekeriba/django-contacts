@@ -1,4 +1,4 @@
-from django.views.generic import ListView
+from django.views.generic import ListView, DetailView
 from django.views.generic.edit import CreateView
 from django.core.urlresolvers import reverse
 
@@ -10,6 +10,15 @@ class ContactListView(ListView):
 
     def get_context_data(self, **kwargs):
         context = super(ContactListView, self).get_context_data(**kwargs)
+        return context
+
+
+class ContactDetailView(DetailView):
+    model = Contact
+
+    def get_context_data(self, **kwargs):
+        context = super(ContactDetailView, self).get_context_data(**kwargs)
+        context['fields'] = Contact._meta.fields
         return context
 
 
