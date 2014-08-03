@@ -18,10 +18,14 @@ class ContactDetailView(DetailView):
     model = Contact
 
     def get_context_data(self, **kwargs):
-        # context = super(ContactDetailView, self).get_context_data(**kwargs)
-        instance = Contact.objects.get(pk=1)
-        context = model_to_dict(instance)
+        context = super(ContactDetailView, self).get_context_data(**kwargs)
+    #     context['id'] = pk
+    #     # context = model_to_dict(instance)
+        context['modeldict'] = model_to_dict(self.object).items() # self.get_field_verbose_name('email')
         return context
+
+    # def get_field_verbose_name(self, field=None):
+    #     return self.object
 
 
 class ContactCreateView(CreateView):

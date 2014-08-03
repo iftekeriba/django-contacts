@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Contact details</title>
+</head>
+<body>
+	<h1>Contact details</h1>
+	{% for field, value in modeldict %}
+	<p>{{ field }}: {{ value }}</p>
+	{% endfor %}
+	
+	Gender: {{ object.get_gender_display }}
+</body>
+</html>
