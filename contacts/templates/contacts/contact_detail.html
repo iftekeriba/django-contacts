@@ -6,8 +6,10 @@
 </head>
 <body>
 	<h1>Contact details</h1>
-	{% for field, value in modeldict %}
-	<p>{{ field }}: {{ value }}</p>
+	{% for field, value in fields %}
+    	{% if value %}
+            <p>{{ field }}: {{ value }}</p>
+        {% endif %}
 	{% endfor %}
 	
 	Gender: {{ object.get_gender_display }}
