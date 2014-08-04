@@ -7,11 +7,7 @@
 <body>
 	<h1>Contact details</h1>
 	{% for field, value in fields %}
-    	{% if value %}
-            <p>{{ field }}: {{ value }}</p>
-        {% endif %}
+        <p>{{ field }}: {{ value|default:"None." }}</p>
 	{% endfor %}
-	
-	Gender: {{ object.get_gender_display }}
 </body>
 </html>
