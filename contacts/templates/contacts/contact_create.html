@@ -1,14 +1,29 @@
 {% extends "contacts/base.html" %}
+{% load widget_tweaks %}
+
 {% block title %}Contact details{% endblock %}
 
 {% block content %}
-    <h1>Add a new contact</h1>
-    <form action="{% url 'contacts:create' %}" method="post">
+<h1>Add a new contact</h1>
+<div class="row">
+    <form action="{% url 'contacts:create' %}" method="post" class="form-horizontal col-lg-6">
         {% csrf_token %}
-        <ul>
-            {{ form.as_ul }}
-        </ul>
-        <input type="submit" value="Add" />
+        <fieldset>
+            {% for field in form %}
+            <div class="form-group">
+                <label for="{{ field.auto_id }}" class="col-lg-4 control-label">
+                    {{ field.label }}:
+                </label>
+                <div class="col-lg-8">
+                    {{ field|attr:"class:form-control" }}
+                </div>
+            </div>
+            {% endfor %}
+            <div class="pull-right">
+                <a class="btn btn-danger" href="{% url 'contacts:list' %}">Back</a>
+                <input type="submit" value="Add" class="btn btn-success" />
+            </div>
+        </fieldset>
     </form>
-    <a href="{% url 'contacts:list' %}">Back to contact list</a>
+</div>
 {% endblock content %}
