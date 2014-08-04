@@ -1,12 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Add a new contact</title>
-</head>
-<body>
-    <h1>Add a new contact</h1>
+{% extends "contacts/base.html" %}
+{% block title %}Contact details{% endblock %}
 
+{% block content %}
+    <h1>Add a new contact</h1>
     <form action="{% url 'contacts:create' %}" method="post">
         {% csrf_token %}
         <ul>
@@ -15,5 +11,4 @@
         <input type="submit" value="Add" />
     </form>
     <a href="{% url 'contacts:list' %}">Back to contact list</a>
-</body>
-</html>
+{% endblock content %}
