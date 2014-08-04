@@ -1,13 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Contact details</title>
-</head>
-<body>
+{% extends "contacts/base.html" %}
+{% block title %}Contact details{% endblock %}
+
+{% block content %}
 	<h1>Contact details</h1>
 	{% for field, value in fields %}
         <p>{{ field }}: {{ value|default:"None." }}</p>
 	{% endfor %}
-</body>
-</html>
+{% endblock content %}
