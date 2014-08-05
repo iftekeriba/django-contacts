@@ -2,8 +2,35 @@
 {% block title %}Contact details{% endblock %}
 
 {% block content %}
+<div class="row">
+	<div class="col-md-4">
+	Breadcrumbs
 	<h1>Contact details</h1>
-	{% for field, value in fields %}
-        <p>{{ field }}: {{ value|default:"None." }}</p>
-	{% endfor %}
+	<table class="table table-striped">
+		<tr>
+			<td>Name:</td>
+			<td>{{ object }}</td>
+		</tr>
+		<tr>
+			<td>E-mail:</td>
+			<td>{{ object.email }}</td>
+		</tr>
+		<tr>
+			<td>NID:</td>
+			<td>{{ object.nid }}</td>
+		</tr>
+		<tr>
+			<td>Gender:</td>
+			<td>{{ object.get_gender_display|capfirst }}</td>
+		</tr>
+		<tr>
+			<td>Observations:</td>
+			<td>{{ object.obs|default:"None" }}</td>
+		</tr>
+	</table>
+	<a href="{% url 'contacts:list' %}" class="btn btn-default">Back to list</a>
+	<a href="{% url 'contacts:list' %}" class="btn btn-primary">Modify</a>
+	<a href="{% url 'contacts:list' %}" class="btn btn-danger">Erase</a>
+	</div>
+</div>
 {% endblock content %}

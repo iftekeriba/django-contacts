@@ -17,16 +17,6 @@ class ContactListView(ListView):
 class ContactDetailView(DetailView):
     model = Contact
 
-    def get_context_data(self, **kwargs):
-        context = super(ContactDetailView, self).get_context_data(**kwargs)
-        modeldict = model_to_dict(self.object)
-        modeldict.pop('id')
-        context['fields'] = modeldict.items()
-        return context
-
-    # def get_field_verbose_name(self, field=None):
-    #     return field
-
 
 class ContactCreateView(CreateView):
     model = Contact
