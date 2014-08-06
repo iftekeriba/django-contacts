@@ -6,7 +6,7 @@
 {% block content %}
 
 <div class="row">
-    <div class="col-md-6">
+    <div class="col-sm-6 col-sm-offset-3">
     <div class="panel panel-primary">
         <div class="panel-heading">
             <span class="glyphicon glyphicon-plus"></span>
@@ -23,14 +23,16 @@
                         <label for="{{ field.auto_id }}" class="col-lg-3 control-label">
                             {{ field.label }}:
                         </label>
-                        <div class="col-lg-8">
+                        <div class="col-lg-9">
                             {{ field|attr:"class:form-control" }}
                         </div>
                     </div>
                     {% endfor %}
-                    <div class="pull-right">
-                        <a class="btn btn-danger" href="{% url 'contacts:list' %}">Back</a>
-                        <input type="submit" value="Add" class="btn btn-success" />
+                    <div>
+                        <input type="submit" value="Add" class="btn btn-success pull-right" />
+                        <a class="btn btn-danger pull-right" href="{% url 'contacts:list' %}">
+                            Back
+                        </a>
                     </div>
                 </fieldset>
             </form>

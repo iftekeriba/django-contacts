@@ -2,11 +2,31 @@
 {% block title %}Contact details{% endblock %}
 
 {% block content %}
-    <h1>Contacts</h1>
-    <ul>
-        {% for contact in object_list  %}
-            <li>{{ contact.email }}</li>
-        {% endfor %}
-    </ul>
-    <a href="{% url 'contacts:create' %}">Add new</a>
+
+<div class="row">
+    <div class="col-md-8 col-md-offset-2">
+        <h1>Contacts</h1>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>E-mail</th>
+                    <th>NID</th>
+                    <th>Gender</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for contact in object_list %}
+                <tr>
+                    <th><a href="{% url 'contacts:detail' pk=contact.id %}">{{ contact }}</a></th>
+                    <th>{{ contact.email }}</th>
+                    <th>{{ contact.nid }}</th>
+                    <th>{{ contact.get_gender_display|capfirst }}</th>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <a href="{% url 'contacts:create' %}" class="btn btn-success">Add new</a>
+    </div>
+</div>
 {% endblock content %}

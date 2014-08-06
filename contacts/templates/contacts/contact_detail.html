@@ -28,9 +28,11 @@
 			<td>{{ object.obs|default:"None" }}</td>
 		</tr>
 	</table>
-	<a href="{% url 'contacts:list' %}" class="btn btn-default">Back to list</a>
-	<a href="{% url 'contacts:list' %}" class="btn btn-primary">Modify</a>
-	<a href="{% url 'contacts:list' %}" class="btn btn-danger">Erase</a>
+	<div>
+		<a href="{% url 'contacts:list' %}" class="btn btn-danger pull-right">Erase</a>
+		<a href="{% url 'contacts:list' %}" class="btn btn-primary pull-right">Modify</a>
+		<a href="{% url 'contacts:list' %}" class="btn btn-default pull-right">Back to list</a>
+	</div>
 	</div>
 </div>
 {% endblock content %}

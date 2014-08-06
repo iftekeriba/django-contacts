@@ -1,7 +1,6 @@
 from django.views.generic import ListView, DetailView
 from django.views.generic.edit import CreateView
 from django.core.urlresolvers import reverse
-from django.forms.models import model_to_dict
 
 from .models import Contact
 
